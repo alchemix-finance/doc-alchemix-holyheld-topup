@@ -1,0 +1,265 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* Importation des polices */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Temporairement commenté jusqu'à ce que nous ayons le fichier de police
+@font-face {
+  font-family: 'Neue Kabel';
+  src: url('../../static/fonts/Neue_Kabel/NeueKabel.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+*/
+
+:root {
+  /* Couleurs Alchemix */
+  --alchemix-primary: #f5caa4;
+  --alchemix-primary-hover: #e0b58f;
+  --alchemix-primary-disabled: rgba(245, 202, 164, 0.4);
+  --alchemix-primary-bg: rgba(245, 202, 164, 0.1);
+  --alchemix-primary-bg-hover: rgba(245, 202, 164, 0.2);
+  --alchemix-button-bg: rgba(245, 202, 164, 0.2);
+  --alchemix-button-hover: rgba(245, 202, 164, 0.35);
+  --alchemix-red: #ff6666;
+
+  /* Variables Docusaurus */
+  --ifm-color-primary: var(--alchemix-primary);
+  --ifm-color-primary-dark: var(--alchemix-primary-hover);
+  --ifm-color-primary-darker: #d6a77c;
+  --ifm-color-primary-darkest: #c79869;
+  --ifm-color-primary-light: #f7d4b3;
+  --ifm-color-primary-lighter: #f9dfc2;
+  --ifm-color-primary-lightest: #fbe9d1;
+  --ifm-code-font-size: 95%;
+  --ifm-font-family-base: 'Montserrat', sans-serif;
+  /* Temporairement utiliser Montserrat pour les titres aussi */
+  --ifm-heading-font-family: 'Montserrat', sans-serif;
+  --docusaurus-highlighted-code-line-bg: rgba(245, 202, 164, 0.1);
+  
+  /* Couleurs de texte */
+  --ifm-color-content: #ffffff;
+  --ifm-color-content-secondary: rgba(255, 255, 255, 0.8);
+}
+
+/* Theme sombre */
+[data-theme='dark'] {
+  --ifm-color-primary: var(--alchemix-primary);
+  --ifm-color-primary-dark: var(--alchemix-primary-hover);
+  --ifm-color-primary-darker: #d6a77c;
+  --ifm-color-primary-darkest: #c79869;
+  --ifm-color-primary-light: #f7d4b3;
+  --ifm-color-primary-lighter: #f9dfc2;
+  --ifm-color-primary-lightest: #fbe9d1;
+  --ifm-background-color: #010101;
+  --ifm-background-surface-color: #141921;
+  --docusaurus-highlighted-code-line-bg: rgba(245, 202, 164, 0.2);
+  
+  /* Couleurs de texte en mode sombre */
+  --ifm-color-content: #ffffff;
+  --ifm-color-content-secondary: rgba(255, 255, 255, 0.8);
+}
+
+/* Style du body */
+body {
+  font-family: var(--ifm-font-family-base);
+  background: linear-gradient(171.08deg, #010101 -11.16%, #141921 6.1%, #0a0d11 49.05%, #000000 93.22%) no-repeat fixed;
+  color: var(--ifm-color-content);
+  min-height: 100vh;
+}
+
+/* Styles des titres */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ifm-heading-font-family);
+  color: var(--ifm-color-content);
+}
+
+/* Style de la navbar */
+.navbar {
+  background-color: rgb(14, 17, 22);
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: var(--alchemix-primary);
+}
+
+.navbar__link {
+  color: var(--ifm-color-content);
+}
+
+/* Style du header */
+.hero {
+  background: linear-gradient(180deg, rgba(20, 25, 33, 0.8) 0%, rgba(10, 13, 17, 0.9) 100%);
+  padding: 4rem 0;
+}
+
+.hero__title {
+  color: var(--alchemix-primary);
+}
+
+.hero__subtitle {
+  color: var(--ifm-color-content);
+}
+
+/* Style du footer */
+.footer {
+  background-color: rgb(14, 17, 22);
+  color: var(--ifm-color-content-secondary);
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.footer__links {
+  justify-content: center;
+}
+
+.footer__col {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.footer__link-item {
+  color: var(--ifm-color-content-secondary);
+}
+
+.footer__link-item:hover {
+  color: var(--alchemix-primary);
+  text-decoration: none;
+}
+
+/* Style des liens */
+a {
+  color: var(--alchemix-primary);
+}
+
+a:hover {
+  color: var(--alchemix-primary-hover);
+}
+
+/* Style des boutons */
+.button {
+  background-color: var(--alchemix-primary);
+  color: #000000;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: var(--alchemix-primary-hover);
+}
+
+.button.button--secondary {
+  color: var(--alchemix-primary);
+  border-color: var(--alchemix-primary);
+  background-color: var(--alchemix-button-bg);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-shadow: 0 0 15px rgba(245, 202, 164, 0.5);
+  box-shadow: 0 0 20px rgba(245, 202, 164, 0.2);
+  padding: 1rem 2rem;
+}
+
+.button.button--secondary:hover {
+  color: var(--alchemix-primary);
+  background-color: var(--alchemix-button-hover);
+  border-color: var(--alchemix-primary);
+  text-shadow: 0 0 20px rgba(245, 202, 164, 0.7);
+  box-shadow: 0 0 25px rgba(245, 202, 164, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Style des cards */
+.card {
+  background: rgba(20, 25, 33, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background: rgba(20, 25, 33, 0.5);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Style des inputs */
+input,
+select {
+  background-color: transparent;
+  border: 1px solid var(--alchemix-primary);
+  color: var(--ifm-color-content);
+  border-radius: 5px;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--alchemix-primary);
+  outline: none;
+}
+
+/* Style du code */
+.theme-code-block {
+  background-color: rgba(20, 25, 33, 0.4) !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Styles spécifiques pour le texte */
+.markdown {
+  color: var(--ifm-color-content);
+}
+
+.markdown p,
+.markdown li {
+  color: var(--ifm-color-content);
+}
+
+.table-of-contents {
+  color: var(--ifm-color-content-secondary);
+}
+
+.table-of-contents:hover {
+  color: var(--ifm-color-content);
+}
+
+.pagination-nav__link {
+  color: var(--ifm-color-content);
+}
+
+.pagination-nav__link:hover {
+  color: var(--alchemix-primary);
+}
+
+/* Media queries pour le responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+  
+  .container {
+    padding: 1rem;
+  }
+}
