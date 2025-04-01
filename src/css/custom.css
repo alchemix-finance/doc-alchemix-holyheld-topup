@@ -36,15 +36,16 @@
   --ifm-color-primary-light: #f7d4b3;
   --ifm-color-primary-lighter: #f9dfc2;
   --ifm-color-primary-lightest: #fbe9d1;
-  --ifm-code-font-size: 95%;
-  --ifm-font-family-base: 'Montserrat', sans-serif;
-  /* Temporairement utiliser Montserrat pour les titres aussi */
-  --ifm-heading-font-family: 'Montserrat', sans-serif;
-  --docusaurus-highlighted-code-line-bg: rgba(245, 202, 164, 0.1);
+  --ifm-background-color: #141921;
+  --ifm-background-surface-color: #141921;
+  --docusaurus-highlighted-code-line-bg: rgb(0, 0, 0);
   
   /* Couleurs de texte */
   --ifm-color-content: #ffffff;
   --ifm-color-content-secondary: rgba(255, 255, 255, 0.8);
+  --ifm-font-family-base: 'Montserrat', sans-serif;
+  /* Temporairement utiliser Montserrat pour les titres aussi */
+  --ifm-heading-font-family: 'Montserrat', sans-serif;
 }
 
 /* Theme sombre */
@@ -58,7 +59,7 @@
   --ifm-color-primary-lightest: #fbe9d1;
   --ifm-background-color: #010101;
   --ifm-background-surface-color: #141921;
-  --docusaurus-highlighted-code-line-bg: rgba(245, 202, 164, 0.2);
+  --docusaurus-highlighted-code-line-bg: rgb(0, 0, 0);
   
   /* Couleurs de texte en mode sombre */
   --ifm-color-content: #ffffff;
@@ -68,7 +69,7 @@
 /* Style du body */
 body {
   font-family: var(--ifm-font-family-base);
-  background: linear-gradient(171.08deg, #010101 -11.16%, #141921 6.1%, #0a0d11 49.05%, #000000 93.22%) no-repeat fixed;
+  background-color: var(--ifm-background-color);
   color: var(--ifm-color-content);
   min-height: 100vh;
 }
@@ -208,7 +209,7 @@ select:focus {
 
 /* Style du code */
 .theme-code-block {
-  background-color: rgba(20, 25, 33, 0.4) !important;
+  background-color: #141921 !important;
 }
 
 /* Animations */
