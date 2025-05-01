@@ -21,21 +21,16 @@ A: First, verify that:
 2. Your wallet is properly connected
 3. You have enough ETH for gas fees
 
-If problems persist, contact support.
+If problems persist, contact us.
 
 **Q: How can I track my transactions?**  
 A: You can:
 - View transactions in your wallet
 - Check the blockchain explorer
-- Monitor your position in our dashboard
+
 
 ## Security
 
-**Q: How secure are my funds?**  
-A: Your funds are secured by smart contracts that have been:
-- Audited by leading security firms
-- Battle-tested in production
-- Covered by insurance protocols
 
 **Q: What happens if I lose access to my wallet?**  
 A: Always keep your recovery phrase safe. We cannot recover lost wallets.
