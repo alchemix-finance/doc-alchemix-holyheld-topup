@@ -18,7 +18,7 @@ For technical issues:
 ## Security Issues
 
 For security-related concerns:
-- Email: geraldquenum9@gmail.com
+- Discord: [Alchemix](https://discord.gg/alchemix)
 - Report critical issues immediately
 
 ## Feedback
